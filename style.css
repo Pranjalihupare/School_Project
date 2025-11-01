@@ -1,0 +1,679 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    padding-top: 120px;
+}
+#container {
+    width: 100%;
+}
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+header div {
+    width: 100%;
+}
+header div img {
+    width: 47%;
+}
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+}
+#navbar_list {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+#navbar_list img {
+    width: 270px;
+    margin-right: 40px;
+}
+#navbar_list li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    margin-left: 70px;
+    margin-top: 200px;
+    gap: 150px;
+}
+#navbar_list li a.active {
+    color: rgb(1, 151, 184);
+}
+#navbar_list li i {
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 80px;
+}
+#menu-toggle {
+    display: none;
+}
+.logo{
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.logo img{
+    height: 80px;
+    width: 230px;
+}
+#herosection .hero_child img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+#program {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: white;
+    margin-top: 40px;
+}
+.program_child {
+    width: 47%;
+    margin: 20px;
+    text-align: center;
+}
+.program_child img {
+    width: 70%;
+    margin: 0 auto;
+}
+.program_child h2 {
+    font-size: 30px;
+}
+.program_child h3 {
+    color: red;
+    font-size: 25px;
+}
+.program_child p {
+    font-size: 23px;
+    margin-top: 20px;
+}
+.program_child button {
+    width: 110px;
+    height: 40px;
+    background-color: orange;
+    border: none;
+    font-size: medium;
+    cursor: pointer;
+    margin-top: 30px;
+}
+#vision {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    background-color: antiquewhite;
+    height: 500px;
+}
+.vision_child,
+.mission {
+    width: 40%;
+    height: 300px;
+    margin: 5px;
+    color: aliceblue;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.vision_child {
+    background-color: rgb(2, 2, 75);
+}
+.mission {
+    background-color: rgb(149, 6, 18);
+}
+.vision_child h2,
+.mission h2 {
+    margin: 10% 0 0 30%;
+}
+.vision_child p,
+.mission p {
+    margin: 5% 5% 0 10%;
+}
+#sustainable {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    background-color: antiquewhite;
+    height: 500px;
+}
+.section {
+    background-color: #3abee7;
+    text-align: center;
+    padding: 50px 0;
+}
+.title {
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+.boxes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.box1,
+.box2,
+.box3,
+.box4 {
+    width: 200px;
+    height: 150px;
+    background-color: rgb(0, 111, 128);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 20%;
+    transition: 0.3s ease;
+}
+.box1:hover {
+    background: url("images/imgi_26_Gandhi Jayanti-2.png") center/cover no-repeat;
+    color: black;
+}
+.box2:hover {
+    background: url("images/imgi_28_climate-change2.jpg") center/cover no-repeat;
+    color: black;
+}
+.box3:hover {
+    background: url("images/imgi_35_forest-pune.png") center/cover no-repeat;
+    color: black;
+}
+.box4:hover {
+    background: url("images/imgi_44_millets4.jpg") center/cover no-repeat;
+    color: black;
+}
+#facilities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: white;
+}
+.facilities_child h2 {
+    text-align: center;
+    font-size: 36px;
+    margin: 40px 0 50px 0;
+}
+.facilities_child p {
+    text-align: center;
+    font-size: 20px;
+    margin: 40px 20%;
+}
+.facilities_child button {
+    width: 110px;
+    height: 40px;
+    background-color: rgb(8, 197, 245);
+    border: none;
+    font-size: medium;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-left: 300px;
+}
+#functions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: white;
+}
+.functions_child1,
+.functions_child2,
+.functions_child3,
+.functions_child4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+.functions_child1 button {
+    background-color: red;
+}
+.functions_child2 button {
+    background-color: blue;
+}
+.functions_child3 button {
+    background-color: green;
+}
+.functions_child4 button {
+    background-color: orange;
+}
+.functions_child1 button,
+.functions_child2 button,
+.functions_child3 button,
+.functions_child4 button {
+    height: 40px;
+    width: 200px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    margin-top: 10px;
+}
+.img-wrapper {
+    position: relative;
+    height: 400px;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 50px 0 20px 0;
+}
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s ease;
+}
+.overlay-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    opacity: 0;
+    transition: 0.3s ease;
+    padding: 15px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.img-wrapper:hover img {
+    transform: scale(1.05);
+    filter: brightness(70%);
+}
+.img-wrapper:hover .overlay-text {
+    opacity: 1;
+}
+.img1 .overlay-text {
+    background-color: rgba(255, 0, 0, 0.4);
+}
+.img2 .overlay-text {
+    background-color: rgba(0, 128, 255, 0.4);
+}
+.img3 .overlay-text {
+    background-color: rgba(0, 200, 0, 0.4);
+}
+.img4 .overlay-text {
+    background-color: rgba(255, 165, 0, 0.4);
+}
+#school-transport {
+    background-color: #fff4e4;
+    text-align: center;
+    padding: 50px 20px;
+}
+#school-transport h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    color: #222;
+}
+.transport-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+.transport-card {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+.transport-card img {
+    width: 100%;
+    height: 160px;
+    border-radius: 5px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.transport-card h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-bottom: 2px solid orange;
+    display: inline-block;
+}
+.transport-card p {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+}
+.transport-card button {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+    margin-bottom: 20px;
+}
+.transport-card button:hover {
+    background-color: #000;
+}
+footer {
+    background-color: #f8f8f8;
+    border-top: 3px solid orange;
+    padding-top: 40px;
+}
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px 40px;
+}
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 0 25px;
+}
+.footer-section h3 {
+    color: #333;
+    margin: 10px 0;
+}
+.footer-section p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 15px;
+}
+.visit-link {
+    color: orange;
+    text-decoration: none;
+    font-weight: 600;
+}
+.visit-link:hover {
+    text-decoration: underline;
+}
+.footer-bottom {
+    background-color: orange;
+    color: white;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 14px;
+}
+
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+    }
+    #navbar_list li a {
+        font-size: 16px;
+    }
+    #navbar_list img {
+        width: 200px;
+    }
+    .program_child,
+    .vision_child,
+    .mission {
+        width: 80%;
+        margin: 15px auto;
+    }
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+@media (max-width: 768px) {
+    body {
+        padding-top: 100px;
+    }
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #navbar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #navbar_list {
+        display: none;
+        flex-direction: column;
+        background-color: rgb(249, 249, 249);
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+        position: absolute;
+        top: 100px;
+        left: 0;
+    }
+    #menu-toggle:checked + .logo + .hamburger + nav #navbar_list {
+  display: flex;
+}
+    label.hamburger {
+        display: inline-block;
+        cursor: pointer;
+        padding: 6px;
+        border-radius: 4px;
+        background: transparent;
+        position: absolute;
+        right: 5px;
+        top: 20px;
+        z-index: 3000;
+        line-height: 0;
+    }
+    label.hamburger img {
+        display: block;
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+        filter: invert(1);
+    }
+    #navbar_list li a {
+        font-size: 20px;
+        margin: 10px 0;
+        display: block;
+    }
+    #program,
+    #vision,
+    #sustainable {
+        flex-direction: column;
+    }
+    .program_child,
+    .vision_child,
+    .mission {
+        width: 90%;
+        margin: 10px auto;
+        text-align: center;
+    }
+    .program_child img {
+        width: 90%;
+        margin: 0;
+    }
+    #vision {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 0;
+    }
+    .vision_child h2,
+    .mission h2,
+    .vision_child p,
+    .mission p {
+        margin: 10px;
+        text-align: center;
+    }
+    .boxes {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .box1,
+    .box2,
+    .box3,
+    .box4 {
+        width: 80%;
+        height: 150px;
+    }
+    .img-wrapper {
+        width: 90%;
+        height: auto;
+    }
+    .transport-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .transport-card {
+        width: 90%;
+    }
+    .footer-section {
+        margin: 15px 0;
+    }
+    .footer-bottom {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding-top: 0;  
+        margin: 0;
+    }
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        margin: 0;         
+        padding: 5px 0;    
+    }
+    #navbar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        margin-top: 0;     
+    }
+    #navbar_list {
+        display: none;
+        flex-direction: column;
+        background-color: rgb(249, 249, 249);
+        width: 100%;
+        text-align: center;
+        margin-top: 8px;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        padding: 8px 0;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        z-index: 2000;
+    }
+    #menu-toggle:checked + .logo + .hamburger + nav #navbar_list {
+        display: flex;
+    }
+    label.hamburger {
+        display: inline-block;
+        cursor: pointer;
+        padding: 4px;
+        border-radius: 4px;
+        background: transparent;
+        position: fixed; 
+        top: 18px;
+        right: 15px; 
+        z-index: 4000;
+        line-height: 0;
+    }
+    label.hamburger img {
+        display: block;
+        width: 22px;
+        height: 22px;
+        object-fit: contain;
+        filter: invert(1);
+    }
+    #navbar_list li a {
+        font-size: 18px;
+        margin: 8px 0;
+        display: block;
+    }
+    #program,
+    #vision,
+    #sustainable {
+        flex-direction: column;
+    }
+    .program_child,
+    .vision_child,
+    .mission {
+        width: 95%;
+        margin: 8px auto;
+        text-align: center;
+    }
+    .program_child img {
+        width: 100%;
+        margin: 0;
+    }
+    #vision {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 0;
+    }
+    .vision_child h2,
+    .mission h2,
+    .vision_child p,
+    .mission p {
+        margin: 8px;
+        text-align: center;
+    }
+    .boxes {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .box1,
+    .box2,
+    .box3,
+    .box4 {
+        width: 90%;
+        height: 140px;
+    }
+    .img-wrapper {
+        width: 95%;
+        height: auto;
+    }
+    .transport-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .transport-card {
+        width: 95%;
+    }
+    .footer-section {
+        margin: 10px 0;
+        text-align: center;
+    }
+    .footer-bottom {
+        font-size: 11px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forest</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding-top: 120px;
+        }
+        #container {
+            width: 100%;
+        }
+        header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 0px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        body {
+            margin: 0;
+            padding-top: 120px;
+        }
+        header div {
+            width: 100%;
+        }
+        header div img {
+            width: 47%;
+        }
+        #navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 30px;
+        }
+        #navbar_list {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        #navbar_list img {
+            width: 270px;
+            margin-right: 40px;
+        }
+        #navbar_list li a {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            font-size: 18px;
+            margin-left: 70px;
+            margin-top: 200px;
+            gap: 150px;
+        }
+        #navbar_list li a.active {
+            color: rgb(1, 151, 184);
+        }
+        #navbar_list li i {
+            color: rgb(0, 0, 0);
+            font-size: 18px;
+            cursor: pointer;
+            margin-left: 80px;
+        }
+        #menu-toggle {
+            display: none;
+        }
+        .logo {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            height: 80px;
+            width: 230px;
+        }
+        .box {
+            width: 100%;
+            height: 100%;
+            background-color: azure;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+        .box h1 {
+            font-size: 50px;
+            margin-top: 50px;
+        }
+        .info {
+            width: 47%;
+            margin: 20px;
+            margin-left: 20px;
+            margin-right: 0px;
+            font-size: 20px;
+        }
+        .info img {
+            width: 70%;
+            margin-left: 80px;
+        }
+        .info h2 {
+            color: brown;
+            margin-bottom: 20PX;
+        }
+        footer {
+            background-color: #f8f8f8;
+            border-top: 3px solid orange;
+            padding-top: 40px;
+        }
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px 40px;
+        }
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin-right: 100px;
+        }
+        .logo {
+            width: 60px;
+        }
+        .footer-section h3 {
+            color: #333;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .footer-section p {
+            color: #555;
+            line-height: 1.6;
+            font-size: 15px;
+        }
+        .visit-link {
+            color: orange;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .visit-link:hover {
+            text-decoration: underline;
+        }
+        .footer-bottom {
+            background-color: orange;
+            color: white;
+            text-align: center;
+            padding: 12px 0;
+            font-size: 14px;
+        }
+        @media (max-width: 768px) {
+            body {
+                padding-top: 100px;
+            }
+            header {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+            #navbar {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+            #navbar_list {
+                display: none;
+                flex-direction: column;
+                background-color: rgb(249, 249, 249);
+                width: 100%;
+                text-align: center;
+                margin-top: 10px;
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+                padding: 10px 0;
+                position: absolute;
+                top: 100px;
+                left: 0;
+            }
+            #menu-toggle:checked+.logo+.hamburger+nav #navbar_list {
+                display: flex;
+            }
+            label.hamburger {
+                display: inline-block;
+                cursor: pointer;
+                padding: 6px;
+                border-radius: 4px;
+                background: transparent;
+                position: absolute;
+                right: 5px;
+                top: 20px;
+                z-index: 3000;
+                line-height: 0;
+            }
+            label.hamburger img {
+                display: block;
+                width: 20px;
+                height: 20px;
+                object-fit: contain;
+                filter: invert(1);
+            }
+            #navbar_list li a {
+                font-size: 20px;
+                margin: 10px 0;
+                display: block;
+            }
+            @media (max-width: 768px) {
+                .box h1 {
+                    font-size: 38px;
+                    margin-top: 40px;
+                }
+                .info {
+                    width: 80%;
+                    font-size: 18px;
+                    margin: 15px auto;
+                    text-align: center;
+                }
+                .info img {
+                    width: 80%;
+                    margin-left: 0;
+                }
+            }
+        }
+        @media (max-width: 480px) {
+            body {
+                padding-top: 90px;
+            }
+            header {
+                padding: 8px 15px;
+            }
+            .logo {
+                margin: 0;
+            }
+            .logo img {
+                width: 180px;
+                height: auto;
+            }
+            .hamburger {
+                display: block;
+                position: absolute;
+                top: 35px;
+                right: 20px;
+                cursor: pointer;
+            }
+            .hamburger img {
+                width: 28px;
+                height: 28px;
+            }
+            #navbar {
+                flex-direction: column;
+                align-items: flex-start;
+                padding-top: 0;
+            }
+            #navbar_list {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                display: none;
+                background-color: white;
+                padding: 10px 0;
+            }
+            #menu-toggle:checked+label+nav #navbar_list {
+                display: flex;
+            }
+            #navbar_list li a {
+                font-size: 15px;
+                margin: 8px 0;
+            }
+            .box {
+                padding: 20px;
+            }
+            .box h1 {
+                font-size: 28px;
+                margin-top: 20px;
+                text-align: center;
+            }
+            .info {
+                width: 95%;
+                font-size: 16px;
+                margin: 10px auto;
+                text-align: center;
+            }
+            .info h2 {
+                font-size: 18px;
+                margin-bottom: 15px;
+            }
+            .info img {
+                width: 100%;
+                margin-left: 0;
+            }
+            footer {
+                text-align: center;
+            }
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+            }
+            .footer-section {
+                margin-right: 0;
+                margin-bottom: 25px;
+            }
+            .footer-section iframe {
+                width: 100%;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section id="container">
+        <header>
+            <div id="navbar">
+                <input type="checkbox" id="menu-toggle">
+                <a href="index.html" class="logo">
+                    <img src="images/imgi_1_DPS-Pune-logo1.png" alt="Logo">
+                </a>
+                <label for="menu-toggle" class="hamburger">
+                    <img src="images/imgi_2_mobile-icon-bar.png" alt="Menu">
+                </label>
+                <nav>
+                    <ul type="none" id="navbar_list">
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="admission.html">Admission</a></li>
+                        <li><a href="#">Achievements</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Student Community</a></li>
+                        <li><a href="#">E-Access</a></li>
+                        <li><i class="fa-solid fa-magnifying-glass"></i></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </section>
+    <main>
+        <div class="container">
+            <div class="box">
+                <h1>School Forest</h1>
+                <div class="info">
+                    <h2>School Forest</h2>
+                    <p>Our exclusively developed School Forest, Miyawaki, serves as a verdant retreat, meticulously
+                        nurtured by students and staff.
+                        Regular tree plantation drives are organised to promote biodiversity and provide hands-on
+                        experience in afforestation.
+                        This initiative serves as a living laboratory where all stakeholders collaborate to teach
+                        students the importance of rewilding and ecosystem restoration.</p>
+                </div>
+                <div class="info">
+                    <img src="images/imgi_36_miyaki-forest-V.png">
+                </div>
+            </div>
+            <footer>
+                <div class="footer-container">
+                    <div class="footer-section">
+                        <img src="images/imgi_78_dps_logo.png" alt="DPS Logo" class="logo">
+                        <h3>DPS PUNE</h3>
+                        <p>Nyati County Vill. Mohammadwadi<br>Pune - 411 060</p>
+                        <p>📞 +91 9175952118<br>📞 +91 9175953118<br>✉️ info@dpspune.com</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>GOOGLE MAP</h3>
+                        <iframe src="https://www.google.com/maps?q=Delhi+Public+School+Pune&output=embed" width="100%"
+                            height="200" style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                    <div class="footer-section">
+                        <h3>TAKSHILA</h3>
+                        <p>Takshila Educational Society laid the foundation of veritable learning in Patna by
+                            establishing Delhi
+                            Public School in the year 1998 in collaboration with the Delhi Public Schools Society.</p>
+                        <a href="#" class="visit-link">Visit Takshila Main Site →</a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© Copyright 2003-25 Delhi Public School Pune | Designed & Maintained by Edunext Technologies Pvt.
+                        Ltd.</p>
+                </div>
+            </footer>
+    </main>
+</body>
+</html>
